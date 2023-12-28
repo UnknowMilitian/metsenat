@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/media.css" />
+    <link rel="stylesheet" href="/assets/css/mixins.css" />
+
+    <title>Metsenat - Yuridik shaxs Ariza</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="application-navbar relative">
+      <div class="container mx-auto px-[6rem]">
+        <nav class="py-[1.5rem] flex flex-row justify-between items-center">
+          <div class="logo">
+            <img
+              class="inline cursor-pointer"
+              src="/assets/images/icon.svg"
+              width="200"
+              alt=""
+            />
+            <span
+              class="logo-span cursor-pointer bg-red-500 text-white rounded-md py-[1px] px-[5px] ml-[2px] text-uppercase"
+              >Club</span
+            >
+          </div>
+          <ul class="ul links flex flex-row gap-[2.3rem] items-center">
+            <li>
+              <a href="">Asosiy</a>
+            </li>
+            <li>
+              <a href="">Grantlar</a>
+            </li>
+            <li>
+              <a href="">Soliq imtiyozlari</a>
+            </li>
+            <li>
+              <a href="">Kirish</a>
+            </li>
+            <li>
+              <button
+                class="border-[2px] px-[1.2rem] py-[0.4rem] rounded-lg border-blue-600 text-blue-600 hover:text-white hover:bg-blue-600 transition-colors duration-100 ease-in delay-100"
+              >
+                Ro'yxatdan o'tish
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /Navbar -->
+    <div class="application_content flex flex-row justify-between h-[90vh]">
+      <div class="form-section w-[50%]">
+        <h1 class="header font-[800] text-[2.2rem] leading-tight">
+          Homiy sifatida ariza topshirish
+        </h1>
+        <div class="button-collection my-[1.5rem]">
+          <button class="btn btn-collection__btn rounded-s-lg active">
+            Jismoniy shaxs
+          </button>
+          <button class="btn btn-collection__btn rounded-e-lg">
+            Yuridik shaxs
+          </button>
+        </div>
+        <form class="application_form">
+          <label for="">F.I.sh (Familiya sim sharifingiz)</label>
+          <input
+            type="text"
+            placeholder="Abdullayev Abdulloh Abdulloh o'g'li"
+          />
+          <label for="">Telefon raqamingiz</label>
+          <input type="number" placeholder="+998 00 000-00-00" />
+
+          <div class="payment_buttons">
+            <label for="">To'lov summasi</label>
+            <button class="payment-buttons__button">
+              1 000 000 <span>uzs</span>
+            </button>
+            <button class="payment-buttons__button">
+              5 000 000 <span>uzs</span>
+            </button>
+            <button class="payment-buttons__button">
+              7 000 000 <span>uzs</span>
+            </button>
+            <button class="payment-buttons__button">
+              10 000 000 <span>uzs</span>
+            </button>
+            <button class="payment-buttons__button">
+              30 000 000 <span>uzs</span>
+            </button>
+            <button class="payment-buttons__button">
+              50 000 000 <span>uzs</span>
+            </button>
+          </div>
+
+          <input
+            type="submit"
+            class="cursor-pointer w-[100%] bg-blue-600 text-white py-[0.6rem] rounded-lg"
+            value="Yuborish"
+          />
+        </form>
+      </div>
+      <div class="application_quote w-[50%]"><h1>wefiho</h1></div>
+    </div>
+
+    <!-- Tailwind  -->
+    <script src="/assets/frameworks/tailwind.js"></script>
+    <!-- JavaScript Scripts -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
