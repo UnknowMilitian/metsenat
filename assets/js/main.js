@@ -1,6 +1,8 @@
 const buttons = document.querySelectorAll("button");
 const dataButtons = document.querySelectorAll("[data-target]");
 const contentSections = document.querySelectorAll('[id^="content"]');
+const inputs = document.querySelectorAll('input[type="text"]');
+const radios = document.querySelectorAll('input[type="radio"]');
 
 const navbarBar = document.querySelector(".bar");
 const mobileContent = document.querySelector(".mobile_content");
@@ -30,6 +32,14 @@ dataButtons.forEach((button) => {
 
     contentSections.forEach((section) => {
       section.classList.toggle("hidden", section.id !== targetId);
+    });
+
+    inputs.forEach((input) => {
+      input.value = "";
+    });
+
+    radios.forEach((radio) => {
+      radio.checked = false;
     });
   });
 
