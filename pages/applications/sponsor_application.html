@@ -28,7 +28,9 @@
               >Club</span
             >
           </div>
-          <ul class="ul links flex flex-row gap-[2.3rem] items-center">
+          <ul
+            class="ul links flex flex-row gap-[2.3rem] items-center text-center"
+          >
             <li>
               <a href="">Asosiy</a>
             </li>
@@ -39,7 +41,21 @@
               <a href="">Soliq imtiyozlari</a>
             </li>
             <li>
-              <a href="">Kirish</a>
+              <a href="" class="flex items-center"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  class="mr-1"
+                  viewBox="0 0 13 18"
+                  fill="none"
+                >
+                  <path
+                    d="M10.375 0.75H2.875C2.17904 0.750744 1.51179 1.02755 1.01967 1.51967C0.527545 2.01179 0.250744 2.67904 0.25 3.375V8.25H7.43922L4.96984 5.78016C4.83513 5.63836 4.76113 5.44955 4.76364 5.25398C4.76614 5.0584 4.84495 4.87155 4.98325 4.73325C5.12155 4.59495 5.3084 4.51614 5.50398 4.51364C5.69955 4.51114 5.88836 4.58513 6.03016 4.71984L9.78016 8.46984C9.9207 8.61048 9.99965 8.80117 9.99965 9C9.99965 9.19883 9.9207 9.38952 9.78016 9.53016L6.03016 13.2802C5.88836 13.4149 5.69955 13.4889 5.50398 13.4864C5.3084 13.4839 5.12155 13.4051 4.98325 13.2668C4.84495 13.1285 4.76614 12.9416 4.76364 12.746C4.76113 12.5505 4.83513 12.3616 4.96984 12.2198L7.43922 9.75H0.25V14.625C0.25 16.1273 1.83391 17.25 3.25 17.25H10.375C11.071 17.2493 11.7382 16.9725 12.2303 16.4803C12.7225 15.9882 12.9993 15.321 13 14.625V3.375C12.9993 2.67904 12.7225 2.01179 12.2303 1.51967C11.7382 1.02755 11.071 0.750744 10.375 0.75Z"
+                    fill="black"
+                  /></svg
+                >Kirish</a
+              >
             </li>
             <li>
               <button
@@ -60,14 +76,21 @@
           Homiy sifatida ariza topshirish
         </h1>
         <div class="button-collection my-[2rem]">
-          <button class="btn btn-collection__btn rounded-s-lg active">
+          <button
+            data-target="content1"
+            class="btn btn-collection__btn rounded-s-lg"
+          >
             Jismoniy shaxs
           </button>
-          <button class="btn btn-collection__btn rounded-e-lg">
+          <button
+            data-target="content2"
+            class="btn btn-collection__btn rounded-e-lg"
+          >
             Yuridik shaxs
           </button>
         </div>
-        <form class="application_form">
+        <!-- Content 1 -->
+        <form id="content1" class="application_form">
           <label for="name">F.I.sh (Familiya sim sharifingiz)</label>
           <input
             type="text"
@@ -76,9 +99,11 @@
           />
           <label for="phone_number">Telefon raqamingiz</label>
           <input
-            type="number"
+            type="tel"
             id="phone_number"
             placeholder="+998 00 000-00-00"
+            pattern="+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}"
+            required
           />
 
           <label>To'lov summasi</label>
@@ -88,9 +113,9 @@
                 type="radio"
                 class="payment-buttons__radio"
                 name="payment"
-                id="payment_1"
+                id="physical_payment_1"
               />
-              <label for="payment_1" class="payment-buttons__label">
+              <label for="physical_payment_1" class="payment-buttons__label">
                 1 000 000 <span>uzs</span>
               </label>
             </div>
@@ -99,9 +124,9 @@
                 type="radio"
                 class="payment-buttons__radio"
                 name="payment"
-                id="payment_2"
+                id="physical_payment_2"
               />
-              <label for="payment_2" class="payment-buttons__label">
+              <label for="physical_payment_2" class="payment-buttons__label">
                 5 000 000 <span>uzs</span>
               </label>
             </div>
@@ -110,9 +135,9 @@
                 type="radio"
                 class="payment-buttons__radio"
                 name="payment"
-                id="payment_3"
+                id="physical_payment_3"
               />
-              <label for="payment_3" class="payment-buttons__label">
+              <label for="physical_payment_3" class="payment-buttons__label">
                 7 000 000 <span>uzs</span>
               </label>
             </div>
@@ -121,9 +146,9 @@
                 type="radio"
                 class="payment-buttons__radio"
                 name="payment"
-                id="payment_4"
+                id="physical_payment_4"
               />
-              <label for="payment_4" class="payment-buttons__label">
+              <label for="physical_payment_4" class="payment-buttons__label">
                 10 000 000 <span>uzs</span>
               </label>
             </div>
@@ -132,9 +157,9 @@
                 type="radio"
                 class="payment-buttons__radio"
                 name="payment"
-                id="payment_5"
+                id="physical_payment_5"
               />
-              <label for="payment_5" class="payment-buttons__label">
+              <label for="physical_payment_5" class="payment-buttons__label">
                 30 000 000 <span>uzs</span>
               </label>
             </div>
@@ -143,9 +168,9 @@
                 type="radio"
                 class="payment-buttons__radio"
                 name="payment"
-                id="payment_6"
+                id="physical_payment_6"
               />
-              <label for="payment_6" class="payment-buttons__label">
+              <label for="physical_payment_6" class="payment-buttons__label">
                 50 000 000 <span>uzs</span>
               </label>
             </div>
@@ -158,6 +183,106 @@
             value="Yuborish"
           />
         </form>
+        <!-- /Content 1 -->
+        <!-- //// -->
+
+        <!-- Content 2 -->
+        <form id="content2" class="application_form hidden">
+          <label for="name">F.I.sh (Familiya sim sharifingiz)</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Abdullayev Abdulloh Abdulloh o'g'li"
+          />
+          <label for="phone_number">Telefon raqamingiz</label>
+          <input
+            type="tel"
+            id="phone_number"
+            placeholder="+998 00 000-00-00"
+            pattern="+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}"
+            required
+          />
+          <label for="company">Tashkilot nomi</label>
+          <input type="text" id="name" placeholder="Orient Group" />
+
+          <label>To'lov summasi</label>
+          <div class="payment_buttons">
+            <div class="payment-buttons__item">
+              <input
+                type="radio"
+                class="payment-buttons__radio"
+                name="payment"
+                id="legal_payment_1"
+              />
+              <label for="legal_payment_1" class="payment-buttons__label">
+                1 000 000 <span>uzs</span>
+              </label>
+            </div>
+            <div class="payment-buttons__item">
+              <input
+                type="radio"
+                class="payment-buttons__radio"
+                name="payment"
+                id="legal_payment_2"
+              />
+              <label for="legal_payment_2" class="payment-buttons__label">
+                5 000 000 <span>uzs</span>
+              </label>
+            </div>
+            <div class="payment-buttons__item">
+              <input
+                type="radio"
+                class="payment-buttons__radio"
+                name="payment"
+                id="legal_payment_3"
+              />
+              <label for="legal_payment_3" class="payment-buttons__label">
+                7 000 000 <span>uzs</span>
+              </label>
+            </div>
+            <div class="payment-buttons__item">
+              <input
+                type="radio"
+                class="payment-buttons__radio"
+                name="payment"
+                id="legal_payment_4"
+              />
+              <label for="legal_payment_4" class="payment-buttons__label">
+                10 000 000 <span>uzs</span>
+              </label>
+            </div>
+            <div class="payment-buttons__item">
+              <input
+                type="radio"
+                class="payment-buttons__radio"
+                name="payment"
+                id="legal_payment_5"
+              />
+              <label for="legal_payment_5" class="payment-buttons__label">
+                30 000 000 <span>uzs</span>
+              </label>
+            </div>
+            <div class="payment-buttons__item">
+              <input
+                type="radio"
+                class="payment-buttons__radio"
+                name="payment"
+                id="legal_payment_6"
+              />
+              <label for="legal_payment_6" class="payment-buttons__label">
+                50 000 000 <span>uzs</span>
+              </label>
+            </div>
+            <!-- ... other radio buttons ... -->
+          </div>
+
+          <input
+            type="submit"
+            class="cursor-pointer w-[100%] bg-blue-600 text-white py-[0.6rem] rounded-lg"
+            value="Yuborish"
+          />
+        </form>
+        <!-- Content 2 -->
       </div>
       <div class="application_quote w-[50%]"><h1>wefiho</h1></div>
     </div>
