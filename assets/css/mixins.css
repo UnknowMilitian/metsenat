@@ -87,3 +87,17 @@
 }
 
 /* Payment Buttons */
+
+/* Others Colors */
+.other_navbar {
+  box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.03);
+}
+
+.other_navbar_second {
+  background-color: white;
+}
+
+.other_content {
+  background-color: var(--bg-gr);
+}
+/* Others Colors */

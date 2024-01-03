@@ -81,6 +81,41 @@
 }
 /* /Application navbar */
 
-/* Application Content  */
-/* /Application Content  */
 /* ! /-----------Application----------- */
+
+/* ! -----------Login----------- */
+.login-form__inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.login-form__inputs label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.login-form__inputs input[type="text"],
+.login-form__inputs input[type="password"] {
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 0.4rem 0.7rem;
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.login-form__inputs input[type="submit"] {
+  color: white;
+  background-color: var(--blue);
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+/* ! /-----------Login----------- */
+
+/* ! -----------Dashboard----------- */
+
+/* ! /-----------Dashboard----------- */

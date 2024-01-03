@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/mixins.css" />
+    <link rel="stylesheet" href="/assets/css/media.css" />
+
+    <title>Metsenat - Diagramma qo'llanmasi</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="dashboard-navbar relative">
+      <div
+        class="other_navbar mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[6rem] relative"
+      >
+        <!-- Header Navbar -->
+        <nav class="py-[1.5rem] flex flex-row justify-between items-center">
+          <div class="logo flex justify-between w-[100%] lg:w-auto">
+            <div class="logo__img">
+              <img
+                class="inline cursor-pointer w-[60%] lg:w-[70%]"
+                src="/assets/images/icon.svg"
+                alt=""
+              />
+              <span
+                class="logo-span cursor-pointer bg-green-500 text-white rounded-md py-[1px] px-[5px] ml-[2px] uppercase text-[0.8rem]"
+                >Pro</span
+              >
+            </div>
+            <img
+              class="bar w-[1.5rem] cursor-pointer lg:hidden"
+              src="/assets/images/bar.svg"
+              alt=""
+            />
+          </div>
+          <div class="desktop_content hidden lg:block">
+            <ul
+              class="ul links flex flex-row gap-[2.5rem] items-center text-center"
+            >
+              <button
+                class="btn bg-gray-200 flex items-center justify-between rounded-md pe-[0.2rem] pl-[1rem] py-[0.3rem] gap-4 font-[600]"
+              >
+                Shohrux
+                <span
+                  ><img
+                    class="bg-green-500 p-1 rounded-md"
+                    src="/assets/images/user_avatar.svg"
+                    alt=""
+                /></span>
+              </button>
+              <li>
+                <a href=""
+                  ><img
+                    class="w-[2.3rem]"
+                    src="/assets/images/logout.svg"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div
+          class="mobile_content lg:hidden h-auto bg-white-900 p-5 absolute z-10 bg-white w-[96%] mx-auto"
+        >
+          <ul
+            class="ul links flex flex-col gap-[2.3rem] items-center text-center"
+          ></ul>
+        </div>
+        <!-- Header Navbar -->
+      </div>
+      <!-- Second Navbar -->
+      <nav class="other_navbar_second bg-gray-50">
+        <div
+          class="container_dashboard mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.3rem]"
+        >
+          <div
+            class="second-navbar__content flex justify-between items-center gap-[3rem]"
+          >
+            <div class="button-collection my-[1.5rem] w-[50%]">
+              <button
+                data-target="tab-content-1"
+                class="btn btn-collection__btn rounded-s-lg"
+              >
+                Dashboard
+              </button>
+              <button
+                data-target="tab-content-2"
+                class="btn btn-collection__btn"
+              >
+                Homiylar
+              </button>
+              <button
+                data-target="tab-content-3"
+                class="btn btn-collection__btn rounded-e-lg"
+              >
+                Talabalar
+              </button>
+            </div>
+            <div class="navbar-content__filter flex gap-2">
+              <div class="flex items-start justify-start">
+                <div class="relative">
+                  <input
+                    type="search"
+                    placeholder="Izlash"
+                    class="px-5 py-2 pl-10 border rounded-md outline-none bg-gray-200"
+                  />
+                  <span class="absolute left-3 top-3 text-gray-500">
+                    <img src="/assets/images/search.svg" alt="" />
+                  </span>
+                </div>
+              </div>
+              <button
+                class="btn bg-blue-100 text-blue-500 flex items-center justify-center px-4 gap-2 rounded-md"
+              >
+                <img
+                  class="w-[20px]"
+                  src="/assets/images/filter.svg"
+                  alt=""
+                /><span>Filter</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- /Second Navbar -->
+    </header>
+    <!-- /Navbar -->
+
+    <!-- Contents -->
+    <div id="tab-content-1" class="">
+      <h1>1</h1>
+    </div>
+    <div id="tab-content-2" class="hidden">
+      <h1>2</h1>
+    </div>
+    <div id="tab-content-3" class="hidden">
+      <h1>3</h1>
+    </div>
+    <!-- /Contents -->
+
+    <!-- Tailwind  -->
+    <script src="/assets/frameworks/tailwind.js"></script>
+    <!-- JavaScript Scripts -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

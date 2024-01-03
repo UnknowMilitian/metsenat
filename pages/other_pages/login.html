@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/mixins.css" />
+    <link rel="stylesheet" href="/assets/css/media.css" />
+
+    <title>Metsenat - Login</title>
+  </head>
+  <body class="bg-gray-100">
+    <article class="login-article text-center">
+      <div class="images mt-[10vh]">
+        <img
+          class="inline w-[50%] md:w-[20%]"
+          src="/assets/images/icon.svg"
+          alt=""
+        />
+        <span
+          class="logo-span cursor-pointer bg-red-500 text-white rounded-md py-[1px] px-[5px] ml-[2px] text-uppercase"
+          >Club</span
+        >
+      </div>
+      <form
+        class="w-[90%] sm:w-[70%] md:w-[50%] lg:w-[30%] my-[2rem] px-5 py-5 md:px-8 rounded-xl shadow bg-white mx-auto text-start"
+      >
+        <h1 class="font-[600] text-[1.5rem]">Kirish</h1>
+        <div class="login-form__inputs">
+          <label for="login">Login</label>
+          <input class="my-2 mb-5" type="text" id="login" placeholder="Login" />
+          <label for="password">Parol</label>
+          <input
+            class="my-2 mb-5"
+            type="password"
+            id="password"
+            placeholder="********"
+          />
+          <input type="submit" value="Kirish" />
+        </div>
+      </form>
+    </article>
+    <!-- Tailwind  -->
+    <script src="/assets/frameworks/tailwind.js"></script>
+  </body>
+</html>
