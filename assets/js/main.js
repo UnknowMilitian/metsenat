@@ -2,6 +2,9 @@ const buttons = document.querySelectorAll("button");
 const dataButtons = document.querySelectorAll("[data-target]");
 const contentSections = document.querySelectorAll('[id^="content"]');
 
+const navbarBar = document.querySelector(".bar");
+const mobileContent = document.querySelector(".mobile_content");
+
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -34,4 +37,8 @@ dataButtons.forEach((button) => {
   if (button.getAttribute("data-target") === "content1") {
     button.classList.add("active");
   }
+});
+
+navbarBar.addEventListener("click", () => {
+  mobileContent.classList.toggle("active");
 });

@@ -1,0 +1,35 @@
+@media only screen and (max-width: 1080px) {
+  .application_content .form-section {
+    padding: 6vh 2rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .application_content .form-section {
+    padding: 6vh 10rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .application_content .form-section {
+    padding: 6vh 3rem;
+  }
+
+  .payment_buttons {
+    grid-gap: 0.5rem;
+  }
+
+  .payment-buttons__label {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .application_content .form-section {
+    padding: 6vh 1rem;
+  }
+
+  .payment-buttons__label {
+    padding: 0.6rem 0.5rem;
+  }
+}

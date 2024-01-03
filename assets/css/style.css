@@ -68,6 +68,17 @@
   color: var(--normal-text);
   background-color: var(--bg-gr);
 }
+
+.mobile_content {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile_content.active {
+  opacity: 1;
+  visibility: visible;
+}
 /* /Application navbar */
 
 /* Application Content  */
