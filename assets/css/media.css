@@ -8,6 +8,9 @@
   .application_content .form-section {
     padding: 6vh 10rem;
   }
+  .tablehead-content {
+    width: 150%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -22,6 +25,10 @@
   .payment-buttons__label {
     padding: 1rem 0.5rem;
   }
+
+  .tablehead-content {
+    width: 200%;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -31,5 +38,9 @@
 
   .payment-buttons__label {
     padding: 0.6rem 0.5rem;
+  }
+
+  .tablehead-content {
+    width: 300%;
   }
 }

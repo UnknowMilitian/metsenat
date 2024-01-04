@@ -56,7 +56,7 @@ dataButtons.forEach((button) => {
   // Adding initial active class to the first button
   if (
     button.getAttribute("data-target") === "content1" ||
-    button.getAttribute("data-target") === "tab-content-1"
+    button.getAttribute("data-target") === "tab-content-2"
   ) {
     button.classList.add("active");
   }
@@ -90,6 +90,8 @@ const data2 = [
 
 // Creating the chart
 const ctx = document.getElementById("myChart").getContext("2d");
+const chart = document.querySelector("#chart");
+
 const myChart = new Chart(ctx, {
   type: "line",
   data: {
@@ -103,7 +105,6 @@ const myChart = new Chart(ctx, {
         fill: false,
         tension: 0.5,
         pointRadius: 0,
-        pointStyle: "circle",
       },
       {
         label: "Talabalar",
@@ -113,7 +114,6 @@ const myChart = new Chart(ctx, {
         fill: false,
         tension: 0.5,
         pointRadius: 0,
-        pointStyle: "circle",
       },
     ],
   },
@@ -132,4 +132,17 @@ const myChart = new Chart(ctx, {
       },
     },
   },
+});
+
+// ! Filter Script
+const sponsorFilter = document.querySelector("#sponsors_filter");
+const sponsorFilterPopup = document.querySelector("#sponsors_filter_popup");
+const sponsorClose = document.querySelector("#sponsor_close");
+
+sponsorFilter.addEventListener("click", () => {
+  sponsorFilterPopup.classList.toggle("hidden");
+});
+
+sponsorClose.addEventListener("click", () => {
+  sponsorFilterPopup.classList.toggle("hidden");
 });

@@ -30,8 +30,6 @@
 .payment_buttons {
   margin: 1rem 0 1.5rem 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
 }
 
 .payment-buttons__item {
@@ -48,7 +46,6 @@
   display: block;
   border-radius: 6px;
   border: 2px solid #e0e7ff;
-  padding: 1rem 1rem;
   position: relative;
   cursor: pointer;
 }
@@ -101,3 +98,23 @@
   background-color: var(--bg-gr);
 }
 /* Others Colors */
+
+/* Table */
+.tablehead-content {
+  width: 100%;
+}
+
+.table_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.table_content .table {
+  background-color: #fff;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+/* Table */
