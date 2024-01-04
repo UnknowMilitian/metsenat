@@ -15,7 +15,7 @@
     <!-- Navbar -->
     <header class="dashboard-navbar relative">
       <div
-        class="other_navbar mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[6rem] relative"
+        class="other_navbar mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] relative"
       >
         <!-- Header Navbar -->
         <nav class="py-[1.5rem] flex flex-row justify-between items-center">
@@ -100,7 +100,9 @@
                 Talabalar
               </button>
             </div>
-            <div class="navbar-content__filter flex gap-2">
+
+            <!-- Filter Contents for every Pills -->
+            <div id="tab-content-1" class="navbar-content__filter flex gap-2">
               <div class="flex items-start justify-start">
                 <div class="relative">
                   <input
@@ -123,6 +125,59 @@
                 /><span>Filter</span>
               </button>
             </div>
+            <div
+              id="tab-content-2"
+              class="navbar-content__filter flex gap-2 hidden"
+            >
+              <div class="flex items-start justify-start">
+                <div class="relative">
+                  <input
+                    type="search"
+                    placeholder="Izlash"
+                    class="px-5 py-2 pl-10 border rounded-md outline-none bg-gray-200"
+                  />
+                  <span class="absolute left-3 top-3 text-gray-500">
+                    <img src="/assets/images/search.svg" alt="" />
+                  </span>
+                </div>
+              </div>
+              <button
+                class="btn bg-blue-100 text-blue-500 flex items-center justify-center px-4 gap-2 rounded-md"
+              >
+                <img
+                  class="w-[20px]"
+                  src="/assets/images/filter.svg"
+                  alt=""
+                /><span>Filter</span>
+              </button>
+            </div>
+            <div
+              id="tab-content-3"
+              class="navbar-content__filter flex gap-2 hidden"
+            >
+              <div class="flex items-start justify-start">
+                <div class="relative">
+                  <input
+                    type="search"
+                    placeholder="Izlash"
+                    class="px-5 py-2 pl-10 border rounded-md outline-none bg-gray-200"
+                  />
+                  <span class="absolute left-3 top-3 text-gray-500">
+                    <img src="/assets/images/search.svg" alt="" />
+                  </span>
+                </div>
+              </div>
+              <button
+                class="btn bg-blue-100 text-blue-500 flex items-center justify-center px-4 gap-2 rounded-md"
+              >
+                <img
+                  class="w-[20px]"
+                  src="/assets/images/filter.svg"
+                  alt=""
+                /><span>Filter</span>
+              </button>
+            </div>
+            <!-- Filter Contents for every Pills -->
           </div>
         </div>
       </nav>
@@ -131,8 +186,59 @@
     <!-- /Navbar -->
 
     <!-- Contents -->
-    <div id="tab-content-1" class="">
-      <h1>1</h1>
+    <div
+      id="tab-content-1"
+      class="mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[100vh]"
+    >
+      <div class="contents">
+        <div
+          class="content-money flex flex-row justify-between items-center py-[2.5rem] gap-[3rem]"
+        >
+          <div
+            class="content-money__card flex gap-3 items-center bg-white p-5 w-[100%] rounded-md"
+          >
+            <img src="/assets/images/money-blue.svg" alt="" />
+            <div class="card-text">
+              <h3 class="card-text__title text-[13px] text-gray-500">
+                Jami to'langan summa
+              </h3>
+              <h1 class="card-text__money text-[1.15rem] font-[600]">
+                14 098 530 000 <span class="text-gray-500">UZS</span>
+              </h1>
+            </div>
+          </div>
+          <div
+            class="content-money__card flex gap-3 items-center bg-white p-5 w-[100%] rounded-md"
+          >
+            <img src="/assets/images/money-yellow.svg" alt="" />
+            <div class="card-text">
+              <h3 class="card-text__title text-[13px] text-gray-500">
+                Jami so'ralgan summa
+              </h3>
+              <h1 class="card-text__money text-[1.15rem] font-[600]">
+                14 098 530 000 <span class="text-gray-500">UZS</span>
+              </h1>
+            </div>
+          </div>
+          <div
+            class="content-money__card flex gap-3 items-center bg-white p-5 w-[100%] rounded-md"
+          >
+            <img src="/assets/images/money-red.svg" alt="" />
+            <div class="card-text">
+              <h3 class="card-text__title text-[13px] text-gray-500">
+                To'lanish kerak summa
+              </h3>
+              <h1 class="card-text__money text-[1.15rem] font-[600]">
+                14 098 530 000 <span class="text-gray-500">UZS</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="content-chart bg-white p-5 rounded-md">
+          <h1 class="text-[1.2rem] font-[600]">Homiylar va Talabalar soni</h1>
+          <canvas id="myChart" width="100" height="30"></canvas>
+        </div>
+      </div>
     </div>
     <div id="tab-content-2" class="hidden">
       <h1>2</h1>
@@ -144,6 +250,8 @@
 
     <!-- Tailwind  -->
     <script src="/assets/frameworks/tailwind.js"></script>
+    <!-- Chart JS -->
+    <script src="/assets/js/chart.js"></script>
     <!-- JavaScript Scripts -->
     <script src="/assets/js/main.js"></script>
   </body>
