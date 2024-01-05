@@ -73,19 +73,19 @@
         <ul class="ul links flex flex-col gap-[2rem] items-center text-center">
           <li
             data-target="tab-content-1"
-            class="flex items-center font-[600] cursor-pointer"
+            class="pill-btn flex items-center font-[600] cursor-pointer"
           >
             Dashboard
           </li>
           <li
             data-target="tab-content-2"
-            class="flex items-center font-[600] cursor-pointer"
+            class="pill-btn flex items-center font-[600] cursor-pointer"
           >
             Homiylar
           </li>
           <li
             data-target="tab-content-3"
-            class="flex items-center font-[600] cursor-pointer"
+            class="pill-btn flex items-center font-[600] cursor-pointer"
           >
             Talabalar
           </li>
@@ -124,19 +124,19 @@
             <div class="button-collection my-[1.5rem] w-[50%] hidden lg:flex">
               <button
                 data-target="tab-content-1"
-                class="btn btn-collection__btn rounded-s-lg"
+                class="pill-btn btn btn-collection__btn rounded-s-lg"
               >
                 Dashboard
               </button>
               <button
                 data-target="tab-content-2"
-                class="btn btn-collection__btn"
+                class="pill-btn btn btn-collection__btn"
               >
                 Homiylar
               </button>
               <button
                 data-target="tab-content-3"
-                class="btn btn-collection__btn rounded-e-lg"
+                class="pill-btn btn btn-collection__btn rounded-e-lg"
               >
                 Talabalar
               </button>
@@ -145,7 +145,7 @@
             <!-- Filter Contents for every Pills -->
             <div
               id="tab-content-1"
-              class="navbar-content__filter flex gap-2 hidden"
+              class="pill-content navbar-content__filter flex gap-2 hidden"
             >
               <div class="flex items-start justify-start">
                 <div class="relative">
@@ -160,7 +160,8 @@
                 </div>
               </div>
               <button
-                class="btn bg-blue-100 text-blue-500 flex items-center justify-center px-4 gap-2 rounded-md"
+                data-target="sponsors_filter_popup"
+                class="popup-button btn bg-blue-100 text-blue-500 flex items-center justify-center px-4 gap-2 rounded-md"
               >
                 <img
                   class="w-[20px]"
@@ -171,7 +172,7 @@
             </div>
             <div
               id="tab-content-2"
-              class="navbar-content__filter flex gap-2 active"
+              class="pill-content navbar-content__filter flex gap-2 active"
             >
               <div class="flex items-start justify-start">
                 <div class="relative">
@@ -186,8 +187,8 @@
                 </div>
               </div>
               <button
-                class="btn bg-blue-100 text-blue-500 flex items-center justify-center px-4 gap-2 rounded-md"
-                id="sponsors_filter"
+                data-target="sponsors_filter"
+                class="popup-btn btn bg-blue-100 text-blue-500 flex items-center justify-center px-4 gap-2 rounded-md"
               >
                 <img
                   class="w-[20px]"
@@ -198,7 +199,7 @@
             </div>
             <div
               id="tab-content-3"
-              class="navbar-content__filter flex gap-2 hidden"
+              class="pill-content navbar-content__filter flex gap-2 hidden"
             >
               <div class="flex items-start justify-start">
                 <div class="relative">
@@ -230,10 +231,200 @@
     </header>
     <!-- /Navbar -->
 
+    <!-- Contents -->
+    <div
+      id="tab-content-1"
+      class="pill-content hidden mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] pb-[2rem]"
+    >
+      <div class="contents">
+        <div
+          class="content-money flex flex-wrap md:flex-nowrap justify-between items-center py-[2.5rem] gap-[1rem] md:gap-[1rem] lg:gap-[3rem]"
+        >
+          <div
+            class="content-money__card flex gap-3 items-center bg-white p-5 w-[100%] rounded-md"
+          >
+            <img src="/assets/images/money-blue.svg" alt="" />
+            <div class="card-text">
+              <h3 class="card-text__title text-[13px] text-gray-500">
+                Jami to'langan summa
+              </h3>
+              <h1 class="card-text__money text-[1.15rem] font-[600]">
+                14 098 530 000 <span class="text-gray-500">UZS</span>
+              </h1>
+            </div>
+          </div>
+          <div
+            class="content-money__card flex gap-3 items-center bg-white p-5 w-[100%] rounded-md"
+          >
+            <img src="/assets/images/money-yellow.svg" alt="" />
+            <div class="card-text">
+              <h3 class="card-text__title text-[13px] text-gray-500">
+                Jami so'ralgan summa
+              </h3>
+              <h1 class="card-text__money text-[1.15rem] font-[600]">
+                14 098 530 000 <span class="text-gray-500">UZS</span>
+              </h1>
+            </div>
+          </div>
+          <div
+            class="content-money__card flex gap-3 items-center bg-white p-5 w-[100%] rounded-md"
+          >
+            <img src="/assets/images/money-red.svg" alt="" />
+            <div class="card-text">
+              <h3 class="card-text__title text-[13px] text-gray-500">
+                To'lanish kerak summa
+              </h3>
+              <h1 class="card-text__money text-[1.15rem] font-[600]">
+                14 098 530 000 <span class="text-gray-500">UZS</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="content-chart bg-white p-5 rounded-md">
+          <h1 class="text-[1.2rem] font-[600]">Homiylar va Talabalar soni</h1>
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div
+      id="tab-content-2"
+      class="pill-content active mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] py-[2rem]"
+    >
+      <div class="overflow-x-scroll">
+        <div class="tablehead-content">
+          <!-- Table header -->
+          <div
+            class="flex justify-between bg-gray-100 uppercase text-gray-500 font-[600] text-[0.8rem] px-[0.5rem]"
+          >
+            <p class="w-[2%]">#</p>
+            <p class="w-[20%]"># F.I.SH</p>
+            <p class="w-[13%]">Tel.raqami</p>
+            <p class="w-[11%]">Homiylik summasi</p>
+            <p class="w-[11%]">Sarflangan summa</p>
+            <p class="w-[8%]">Sana</p>
+            <p class="w-[8%]">Holati</p>
+            <p class="w-[5%]">Amallar</p>
+          </div>
+          <div class="table_content my-[0.8rem] flex flex-col gap-[0.5rem]">
+            <!-- Table rows -->
+            <div class="table text-[0.9rem]">
+              <div class="w-[2%]">1</div>
+              <div class="w-[20%] font-[600]">Rustamov Oybek Tajiddnovich</div>
+              <div class="w-[13%]">+998 90 435 67 67</div>
+              <div class="w-[11%] font-[600]">
+                70 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
+              </div>
+              <div class="w-[11%] font-[600]">
+                20 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
+              </div>
+              <div class="w-[8%] font-[600]">18.10.2023</div>
+              <div class="w-[8%]">
+                <p class="text-orange-500">Moderatsiyada</p>
+              </div>
+              <div class="w-[5%]">
+                <img
+                  class="w-[25px] mx-auto"
+                  src="/assets/images/eye.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="table text-[0.9rem]">
+              <div class="w-[2%]">2</div>
+              <div class="w-[20%] font-[600]">Rustamov Oybek Tajiddnovich</div>
+              <div class="w-[13%]">+998 90 435 67 67</div>
+              <div class="w-[11%] font-[600]">
+                70 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
+              </div>
+              <div class="w-[11%] font-[600]">
+                20 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
+              </div>
+              <div class="w-[8%] font-[600]">18.10.2023</div>
+              <div class="w-[8%]">
+                <p class="text-green-500">Tasdiqlangan</p>
+              </div>
+              <div class="w-[5%]">
+                <img
+                  class="w-[25px] mx-auto"
+                  src="/assets/images/eye.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="table text-[0.9rem]">
+              <div class="w-[2%]">3</div>
+              <div class="w-[20%] font-[600]">Rustamov Oybek Tajiddnovich</div>
+              <div class="w-[13%]">+998 90 435 67 67</div>
+              <div class="w-[11%] font-[600]">
+                70 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
+              </div>
+              <div class="w-[11%] font-[600]">
+                20 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
+              </div>
+              <div class="w-[8%] font-[600]">18.10.2023</div>
+              <div class="w-[8%]">
+                <p class="text-blue-500">Yangi</p>
+              </div>
+              <div class="w-[5%]">
+                <img
+                  class="w-[25px] mx-auto"
+                  src="/assets/images/eye.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- Add more rows as needed -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div
+        class="fixed bottom-5 z-1 flex justify-between items-center mt-4 w-[90%]"
+      >
+        <div class="pagination_text">(59) 1-10</div>
+        <div class="pagination flex items-center">
+          <button
+            class="bg-white text-gray-300 font-bold px-2 rounded cursor-not-allowed"
+            disabled
+          >
+            <
+          </button>
+          <div class="flex gap-[0.5rem] px-[0.5rem]">
+            <button
+              class="bg-white text-blue-500 border border-blue-500 font-bold px-2 rounded"
+            >
+              1
+            </button>
+            <button class="bg-white text-gray-800 font-bold px-2 rounded">
+              2
+            </button>
+            <button class="bg-white text-gray-800 font-bold px-2 rounded">
+              ...
+            </button>
+            <button class="bg-white text-gray-800 font-bold px-2 rounded">
+              9
+            </button>
+            <button class="bg-white text-gray-800 font-bold px-2 rounded">
+              10
+            </button>
+          </div>
+          <button class="bg-white text-gray-800 font-bold px-2 rounded">
+            >
+          </button>
+        </div>
+      </div>
+      <!-- /Pagination -->
+    </div>
+    <div id="tab-content-3" class="pill-content hidden">
+      <h1>3</h1>
+    </div>
+    <!-- /Contents -->
+
     <!-- Sponsors Filter -->
     <div
-      id="sponsors_filter_popup"
-      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10"
+      id="sponsors_filter"
+      class="popup hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10"
     >
       <div
         class="bg-white p-6 rounded-md shadow-md w-[95%] md:w-[60%] lg:w-[45%] h-auto"
@@ -241,8 +432,8 @@
         <div class="title flex justify-between items-center mb-[1.5rem]">
           <h2 class="text-lg font-bold">Filter</h2>
           <img
-            class="cursor-pointer"
-            id="sponsor_close"
+            class="popup-btn cursor-pointer"
+            data-target="sponsors_filter"
             src="/assets/images/close.svg"
             alt=""
           />
@@ -402,196 +593,6 @@
     <!-- ///// -->
     <!-- Students Filter -->
     <!-- /Students Filter -->
-
-    <!-- Contents -->
-    <div
-      id="tab-content-1"
-      class="hidden mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] pb-[2rem]"
-    >
-      <div class="contents">
-        <div
-          class="content-money flex flex-wrap md:flex-nowrap justify-between items-center py-[2.5rem] gap-[1rem] md:gap-[1rem] lg:gap-[3rem]"
-        >
-          <div
-            class="content-money__card flex gap-3 items-center bg-white p-5 w-[100%] rounded-md"
-          >
-            <img src="/assets/images/money-blue.svg" alt="" />
-            <div class="card-text">
-              <h3 class="card-text__title text-[13px] text-gray-500">
-                Jami to'langan summa
-              </h3>
-              <h1 class="card-text__money text-[1.15rem] font-[600]">
-                14 098 530 000 <span class="text-gray-500">UZS</span>
-              </h1>
-            </div>
-          </div>
-          <div
-            class="content-money__card flex gap-3 items-center bg-white p-5 w-[100%] rounded-md"
-          >
-            <img src="/assets/images/money-yellow.svg" alt="" />
-            <div class="card-text">
-              <h3 class="card-text__title text-[13px] text-gray-500">
-                Jami so'ralgan summa
-              </h3>
-              <h1 class="card-text__money text-[1.15rem] font-[600]">
-                14 098 530 000 <span class="text-gray-500">UZS</span>
-              </h1>
-            </div>
-          </div>
-          <div
-            class="content-money__card flex gap-3 items-center bg-white p-5 w-[100%] rounded-md"
-          >
-            <img src="/assets/images/money-red.svg" alt="" />
-            <div class="card-text">
-              <h3 class="card-text__title text-[13px] text-gray-500">
-                To'lanish kerak summa
-              </h3>
-              <h1 class="card-text__money text-[1.15rem] font-[600]">
-                14 098 530 000 <span class="text-gray-500">UZS</span>
-              </h1>
-            </div>
-          </div>
-        </div>
-        <div class="content-chart bg-white p-5 rounded-md">
-          <h1 class="text-[1.2rem] font-[600]">Homiylar va Talabalar soni</h1>
-          <canvas id="myChart"></canvas>
-        </div>
-      </div>
-    </div>
-    <div
-      id="tab-content-2"
-      class="active mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] py-[2rem]"
-    >
-      <div class="overflow-x-scroll">
-        <div class="tablehead-content">
-          <!-- Table header -->
-          <div
-            class="flex justify-between bg-gray-100 uppercase text-gray-500 font-[600] text-[0.8rem] px-[0.5rem]"
-          >
-            <p class="w-[2%]">#</p>
-            <p class="w-[20%]"># F.I.SH</p>
-            <p class="w-[13%]">Tel.raqami</p>
-            <p class="w-[11%]">Homiylik summasi</p>
-            <p class="w-[11%]">Sarflangan summa</p>
-            <p class="w-[8%]">Sana</p>
-            <p class="w-[8%]">Holati</p>
-            <p class="w-[5%]">Amallar</p>
-          </div>
-          <div class="table_content my-[0.8rem] flex flex-col gap-[0.5rem]">
-            <!-- Table rows -->
-            <div class="table text-[0.9rem]">
-              <div class="w-[2%]">1</div>
-              <div class="w-[20%] font-[600]">Rustamov Oybek Tajiddnovich</div>
-              <div class="w-[13%]">+998 90 435 67 67</div>
-              <div class="w-[11%] font-[600]">
-                70 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
-              </div>
-              <div class="w-[11%] font-[600]">
-                20 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
-              </div>
-              <div class="w-[8%] font-[600]">18.10.2023</div>
-              <div class="w-[8%]">
-                <p class="text-orange-500">Moderatsiyada</p>
-              </div>
-              <div class="w-[5%]">
-                <img
-                  class="w-[25px] mx-auto"
-                  src="/assets/images/eye.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="table text-[0.9rem]">
-              <div class="w-[2%]">2</div>
-              <div class="w-[20%] font-[600]">Rustamov Oybek Tajiddnovich</div>
-              <div class="w-[13%]">+998 90 435 67 67</div>
-              <div class="w-[11%] font-[600]">
-                70 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
-              </div>
-              <div class="w-[11%] font-[600]">
-                20 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
-              </div>
-              <div class="w-[8%] font-[600]">18.10.2023</div>
-              <div class="w-[8%]">
-                <p class="text-green-500">Tasdiqlangan</p>
-              </div>
-              <div class="w-[5%]">
-                <img
-                  class="w-[25px] mx-auto"
-                  src="/assets/images/eye.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="table text-[0.9rem]">
-              <div class="w-[2%]">3</div>
-              <div class="w-[20%] font-[600]">Rustamov Oybek Tajiddnovich</div>
-              <div class="w-[13%]">+998 90 435 67 67</div>
-              <div class="w-[11%] font-[600]">
-                70 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
-              </div>
-              <div class="w-[11%] font-[600]">
-                20 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
-              </div>
-              <div class="w-[8%] font-[600]">18.10.2023</div>
-              <div class="w-[8%]">
-                <p class="text-blue-500">Yangi</p>
-              </div>
-              <div class="w-[5%]">
-                <img
-                  class="w-[25px] mx-auto"
-                  src="/assets/images/eye.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <!-- Add more rows as needed -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Pagination -->
-      <div
-        class="fixed bottom-5 z-1 flex justify-between items-center mt-4 w-[90%]"
-      >
-        <div class="pagination_text">(59) 1-10</div>
-        <div class="pagination flex items-center">
-          <button
-            class="bg-white text-gray-300 font-bold px-2 rounded cursor-not-allowed"
-            disabled
-          >
-            <
-          </button>
-          <div class="flex gap-[0.5rem] px-[0.5rem]">
-            <button
-              class="bg-white text-blue-500 border border-blue-500 font-bold px-2 rounded"
-            >
-              1
-            </button>
-            <button class="bg-white text-gray-800 font-bold px-2 rounded">
-              2
-            </button>
-            <button class="bg-white text-gray-800 font-bold px-2 rounded">
-              ...
-            </button>
-            <button class="bg-white text-gray-800 font-bold px-2 rounded">
-              9
-            </button>
-            <button class="bg-white text-gray-800 font-bold px-2 rounded">
-              10
-            </button>
-          </div>
-          <button class="bg-white text-gray-800 font-bold px-2 rounded">
-            >
-          </button>
-        </div>
-      </div>
-      <!-- /Pagination -->
-    </div>
-    <div id="tab-content-3" class="hidden">
-      <h1>3</h1>
-    </div>
-    <!-- /Contents -->
 
     <!-- Tailwind  -->
     <script src="/assets/frameworks/tailwind.js"></script>

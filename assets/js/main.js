@@ -1,15 +1,25 @@
 const buttons = document.querySelectorAll("button");
-const dataButtons = document.querySelectorAll("[data-target]");
+const dataButtons = document.querySelectorAll(".pill-btn[data-target]");
 const contentSections = document.querySelectorAll('[id^="content"]');
-const contentSectionsTab = document.querySelectorAll('[id^="tab-content"]');
+const contentSectionsTab = document.querySelectorAll(
+  '.pill-content[id^="tab-content"]'
+);
+
 const inputs = document.querySelectorAll('input[type="text"]');
 const radios = document.querySelectorAll('input[type="radio"]');
 
 const navbarBar = document.querySelector(".bar");
 const mobileContent = document.querySelector(".mobile_content");
+const mobileContentLi = document.querySelectorAll(".mobile_content ul li");
 
 navbarBar.addEventListener("click", () => {
   mobileContent.classList.toggle("active");
+});
+
+mobileContentLi.forEach((li) => {
+  li.addEventListener("click", () => {
+    mobileContent.classList.remove("active");
+  });
 });
 
 buttons.forEach((btn) => {
@@ -56,14 +66,26 @@ dataButtons.forEach((button) => {
   // Adding initial active class to the first button
   if (
     button.getAttribute("data-target") === "content1" ||
-    button.getAttribute("data-target") === "tab-content-2"
+    button.getAttribute("data-target") === "tab-content-2" ||
+    button.getAttribute("data-target") === "sponsor-detail_content1"
   ) {
     button.classList.add("active");
   }
 });
 // ! Js Code For Application Form
 
-// Chart JSON
+// ! Filter Script
+const popupButtons = document.querySelectorAll(".popup-btn");
+
+popupButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetId = button.getAttribute("data-target");
+    const popup = document.getElementById(targetId);
+
+    popup.classList.toggle("hidden");
+  });
+});
+
 // Sample data for two lines
 const labels = [
   "January",
@@ -132,17 +154,4 @@ const myChart = new Chart(ctx, {
       },
     },
   },
-});
-
-// ! Filter Script
-const sponsorFilter = document.querySelector("#sponsors_filter");
-const sponsorFilterPopup = document.querySelector("#sponsors_filter_popup");
-const sponsorClose = document.querySelector("#sponsor_close");
-
-sponsorFilter.addEventListener("click", () => {
-  sponsorFilterPopup.classList.toggle("hidden");
-});
-
-sponsorClose.addEventListener("click", () => {
-  sponsorFilterPopup.classList.toggle("hidden");
 });
