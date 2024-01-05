@@ -117,4 +117,13 @@
   display: flex;
   justify-content: space-between;
 }
+
+.table_content .sponsor_table {
+  background-color: #f6f6f6;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ececec;
+}
 /* Table */

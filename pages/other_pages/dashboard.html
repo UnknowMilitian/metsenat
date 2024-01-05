@@ -172,7 +172,7 @@
             </div>
             <div
               id="tab-content-2"
-              class="pill-content navbar-content__filter flex gap-2 active"
+              class="pill-content navbar-content__filter flex gap-2 hidden"
             >
               <div class="flex items-start justify-start">
                 <div class="relative">
@@ -199,7 +199,7 @@
             </div>
             <div
               id="tab-content-3"
-              class="pill-content navbar-content__filter flex gap-2 hidden"
+              class="pill-content navbar-content__filter flex gap-2 active"
             >
               <div class="flex items-start justify-start">
                 <div class="relative">
@@ -214,11 +214,11 @@
                 </div>
               </div>
               <button
-                class="btn bg-blue-100 text-blue-500 flex items-center justify-center px-4 gap-2 rounded-md"
+                data-target="students_filter"
+                class="popup-btn btn bg-blue-100 text-blue-500 flex items-center justify-center px-4 gap-2 rounded-md"
               >
                 <img
                   class="w-[20px]"
-                  id="students_filter"
                   src="/assets/images/filter.svg"
                   alt=""
                 /><span>Filter</span>
@@ -288,7 +288,7 @@
     </div>
     <div
       id="tab-content-2"
-      class="pill-content active mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] py-[2rem]"
+      class="pill-content hidden mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] py-[2rem]"
     >
       <div class="overflow-x-scroll">
         <div class="tablehead-content">
@@ -416,8 +416,94 @@
       </div>
       <!-- /Pagination -->
     </div>
-    <div id="tab-content-3" class="pill-content hidden">
-      <h1>3</h1>
+    <div
+      id="tab-content-3"
+      class="pill-content active mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] py-[1.5rem]"
+    >
+      <div class="tab2-content_button flex mb-[1.5rem] justify-end">
+        <a class="btn bg-blue-600 text-white rounded-md px-[1rem] py-[0.5rem]">
+          + Talaba qo'shish
+        </a>
+      </div>
+      <div class="overflow-x-scroll">
+        <div class="tablehead-content">
+          <!-- Table header -->
+          <div
+            class="flex justify-between bg-gray-100 uppercase text-gray-500 font-[600] text-[0.8rem] px-[0.5rem]"
+          >
+            <p class="w-[1%]">#</p>
+            <p class="w-[20%]"># F.I.SH</p>
+            <p class="w-[10%]">Talabalik turi</p>
+            <p class="w-[15%]">OTM</p>
+            <p class="w-[10%]">Ajratilgan summa</p>
+            <p class="w-[10%]">Kontrakt Miqdori</p>
+            <p class="w-[5%]">Amallar</p>
+          </div>
+          <div class="table_content my-[0.8rem] flex flex-col gap-[0.5rem]">
+            <!-- Table rows -->
+            <div class="table text-[0.9rem] items-center">
+              <div class="w-[1%]">1</div>
+              <div class="w-[20%] font-[600]">Rustamov Oybek Tajiddnovich</div>
+              <div class="w-[10%]">Bakalavr</div>
+              <div class="w-[15%] font-[600]">
+                O'zbekiston milliy universiteti
+              </div>
+              <div class="w-[10%] font-[600]">
+                20 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
+              </div>
+              <div class="w-[10%] font-[600]">
+                20 000 000 <span class="text-gray-500 text-[0.8rem]">UZS</span>
+              </div>
+              <div class="w-[5%]">
+                <img
+                  class="w-[25px] mx-auto"
+                  src="/assets/images/eye.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- Add more rows as needed -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div
+        class="fixed bottom-5 z-1 flex justify-between items-center mt-4 w-[90%]"
+      >
+        <div class="pagination_text">(59) 1-10</div>
+        <div class="pagination flex items-center">
+          <button
+            class="bg-white text-gray-300 font-bold px-2 rounded cursor-not-allowed"
+            disabled
+          >
+            <
+          </button>
+          <div class="flex gap-[0.5rem] px-[0.5rem]">
+            <button
+              class="bg-white text-blue-500 border border-blue-500 font-bold px-2 rounded"
+            >
+              1
+            </button>
+            <button class="bg-white text-gray-800 font-bold px-2 rounded">
+              2
+            </button>
+            <button class="bg-white text-gray-800 font-bold px-2 rounded">
+              ...
+            </button>
+            <button class="bg-white text-gray-800 font-bold px-2 rounded">
+              9
+            </button>
+            <button class="bg-white text-gray-800 font-bold px-2 rounded">
+              10
+            </button>
+          </div>
+          <button class="bg-white text-gray-800 font-bold px-2 rounded">
+            >
+          </button>
+        </div>
+      </div>
+      <!-- /Pagination -->
     </div>
     <!-- /Contents -->
 
@@ -592,6 +678,68 @@
     <!-- /Sponsors Filter -->
     <!-- ///// -->
     <!-- Students Filter -->
+    <div
+      id="students_filter"
+      class="popup hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10"
+    >
+      <div
+        class="bg-white p-6 rounded-md shadow-md w-[95%] md:w-[60%] lg:w-[30%] h-auto"
+      >
+        <div class="title flex justify-between items-center mb-[1.5rem]">
+          <h2 class="text-lg font-bold">Filter</h2>
+          <img
+            class="popup-btn cursor-pointer"
+            data-target="students_filter"
+            src="/assets/images/close.svg"
+            alt=""
+          />
+        </div>
+        <label class="font-[600] text-[0.7rem] uppercase tracking-wide"
+          >Talabalik turi</label
+        >
+        <select
+          class="block w-full border border-gray-300 p-2 mt-[0.25rem] mb-[0.7rem] rounded bg-blue-50 border border-blue-100"
+        >
+          <!-- Your select options here -->
+          <option value="option1">Barchasi</option>
+          <option value="option2">Bakalavr</option>
+          <option value="option3">Magistr</option>
+          <option value="option3">Kontrakt</option>
+          <option value="option3">Super kontrakt</option>
+        </select>
+
+        <label class="font-[600] text-[0.7rem] uppercase tracking-wide"
+          >OTM</label
+        >
+        <select
+          class="block w-full border border-gray-300 p-2 mt-[0.25rem] mb-[1rem] rounded bg-blue-50 border border-blue-100"
+        >
+          <!-- Your select options here -->
+          <option value="option1">
+            O'zbekiston Davlar Jahon Tillar Universiteti
+          </option>
+          <option value="option1">ADU</option>
+          <option value="option2">MED</option>
+          <option value="option3">OMU</option>
+          <option value="option3">Paxtachilik</option>
+        </select>
+        <hr />
+        <div class="buttons flex justify-end gap-[1rem]">
+          <button
+            id="applyFilter"
+            class="border-2 border-gray-300 text-gray-300 py-2 px-4 rounded mt-[1.5rem]"
+          >
+            Tozalash
+          </button>
+          <button
+            id="applyFilter"
+            class="bg-blue-600 text-white py-2 px-4 rounded mt-[1.5rem]"
+          >
+            Natijalarni ko'rish
+          </button>
+        </div>
+      </div>
+    </div>
     <!-- /Students Filter -->
 
     <!-- Tailwind  -->

@@ -46,7 +46,7 @@ dataButtons.forEach((button) => {
   });
 
   if (
-    ["content1", "tab-content-2", "sponsor-detail_content1"].includes(
+    ["content1", "tab-content-3", "sponsor-detail_content1"].includes(
       button.getAttribute("data-target")
     )
   ) {
