@@ -145,7 +145,7 @@
             <!-- Filter Contents for every Pills -->
             <div
               id="tab-content-1"
-              class="pill-content navbar-content__filter flex gap-2 hidden"
+              class="pill-content navbar-content__filter flex gap-2 active"
             >
               <div class="flex items-start justify-start">
                 <div class="relative">
@@ -199,14 +199,14 @@
             </div>
             <div
               id="tab-content-3"
-              class="pill-content navbar-content__filter flex gap-2 active"
+              class="pill-content navbar-content__filter flex gap-2 hidden"
             >
               <div class="flex items-start justify-start">
                 <div class="relative">
                   <input
                     type="search"
                     placeholder="Izlash"
-                    class="px-5 py-2 pl-10 border rounded-md outline-none bg-gray-200"
+                    class="px-5 py-2 pl-10 border rounded-md outline-none bg-gray-200 w-[90%] sm:w-[100%]"
                   />
                   <span class="absolute left-3 top-3 text-gray-500">
                     <img src="/assets/images/search.svg" alt="" />
@@ -234,7 +234,7 @@
     <!-- Contents -->
     <div
       id="tab-content-1"
-      class="pill-content hidden mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] pb-[2rem]"
+      class="pill-content active mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] pb-[2rem]"
     >
       <div class="contents">
         <div
@@ -418,10 +418,13 @@
     </div>
     <div
       id="tab-content-3"
-      class="pill-content active mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] py-[1.5rem]"
+      class="pill-content hidden mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] bg-gray-100 min-h-[80vh] py-[1.5rem]"
     >
       <div class="tab2-content_button flex mb-[1.5rem] justify-end">
-        <a class="btn bg-blue-600 text-white rounded-md px-[1rem] py-[0.5rem]">
+        <a
+          href="/pages/other_pages/student_new.html"
+          class="btn bg-blue-600 text-white rounded-md px-[1rem] py-[0.5rem]"
+        >
           + Talaba qo'shish
         </a>
       </div>

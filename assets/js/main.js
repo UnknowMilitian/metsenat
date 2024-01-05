@@ -46,7 +46,7 @@ dataButtons.forEach((button) => {
   });
 
   if (
-    ["content1", "tab-content-3", "sponsor-detail_content1"].includes(
+    ["content1", "tab-content-1", "sponsor-detail_content1"].includes(
       button.getAttribute("data-target")
     )
   ) {
@@ -63,7 +63,20 @@ popupButtons.forEach((button) => {
   });
 });
 
-const labels = ["January", "February" /* ... */, , "December"];
+const labels = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 const data1 = [
   10000, 30000, 25000, 40000, 30000, 20000, 10000, 42000, 34000, 65000, 50000,
   50000,
