@@ -12,104 +12,109 @@
     <title>Metsenat - Homiy xaqida batafsil</title>
   </head>
   <body>
-    <div
-      class="other_navbar mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] relative"
-    >
-      <!-- Header Navbar -->
-      <nav class="py-[1.5rem] flex flex-row justify-between items-center">
-        <div class="logo flex justify-between w-[100%] lg:w-auto">
-          <div class="logo__img">
+    <header>
+      <div
+        class="other_navbar mx-auto px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.5rem] relative"
+      >
+        <!-- Header Navbar -->
+        <nav class="py-[1.5rem] flex flex-row justify-between items-center">
+          <div class="logo flex justify-between w-[100%] lg:w-auto">
+            <div class="logo__img">
+              <img
+                class="inline cursor-pointer w-[60%] lg:w-[70%]"
+                src="/assets/images/icon.svg"
+                alt=""
+              />
+              <span
+                class="logo-span cursor-pointer bg-green-500 text-white rounded-md py-[1px] px-[5px] ml-[2px] uppercase text-[0.8rem]"
+                >Pro</span
+              >
+            </div>
             <img
-              class="inline cursor-pointer w-[60%] lg:w-[70%]"
-              src="/assets/images/icon.svg"
+              class="bar w-[1.5rem] cursor-pointer lg:hidden"
+              src="/assets/images/bar.svg"
               alt=""
             />
-            <span
-              class="logo-span cursor-pointer bg-green-500 text-white rounded-md py-[1px] px-[5px] ml-[2px] uppercase text-[0.8rem]"
-              >Pro</span
-            >
           </div>
-          <img
-            class="bar w-[1.5rem] cursor-pointer lg:hidden"
-            src="/assets/images/bar.svg"
-            alt=""
-          />
-        </div>
-        <div class="desktop_content hidden lg:block">
-          <ul
-            class="ul links flex flex-row gap-[2.5rem] items-center text-center"
-          >
-            <button
-              class="btn bg-gray-200 flex items-center justify-between rounded-md pe-[0.2rem] pl-[1rem] py-[0.3rem] gap-4 font-[600]"
+          <div class="desktop_content hidden lg:block">
+            <ul
+              class="ul links flex flex-row gap-[2.5rem] items-center text-center"
             >
-              Shohrux
-              <span
-                ><img
-                  class="bg-green-500 p-1 rounded-md"
-                  src="/assets/images/user_avatar.svg"
-                  alt=""
-              /></span>
+              <button
+                class="btn bg-gray-200 flex items-center justify-between rounded-md pe-[0.2rem] pl-[1rem] py-[0.3rem] gap-4 font-[600]"
+              >
+                Shohrux
+                <span
+                  ><img
+                    class="bg-green-500 p-1 rounded-md"
+                    src="/assets/images/user_avatar.svg"
+                    alt=""
+                /></span>
+              </button>
+              <li>
+                <a href=""
+                  ><img
+                    class="w-[2.3rem]"
+                    src="/assets/images/logout.svg"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Header Navbar -->
+      </div>
+
+      <!-- Navbar Mobile Version -->
+      <div
+        class="mobile_content lg:hidden h-auto bg-white-900 p-8 absolute z-10 bg-white w-[100%] shadow"
+      >
+        <ul class="ul links flex flex-col gap-[2rem] items-center text-center">
+          <button
+            class="btn bg-gray-200 flex items-center justify-between rounded-md pe-[0.2rem] pl-[1rem] py-[0.3rem] gap-4 font-[600]"
+          >
+            Shohrux
+            <span
+              ><img
+                class="bg-green-500 p-1 rounded-md"
+                src="/assets/images/user_avatar.svg"
+                alt=""
+            /></span>
+          </button>
+          <li>
+            <a href="" class="flex items-center font-[600]"
+              ><img
+                class="mr-1 w-[30px]"
+                src="/assets/images/logout.svg"
+                alt=""
+              />Chiqish</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- /Navbar Mobile Version -->
+
+      <!-- Second Navbar -->
+      <nav class="other_navbar_second bg-gray-50">
+        <div
+          class="container_dashboard mx-auto py-[2rem] px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.3rem]"
+        >
+          <div class="second-navbar__content flex items-center gap-[1rem]">
+            <a href="#" class="font-[600] text-[1.2rem]">
+              <span> &larr;</span> Ishmuhammedov Aziz Ishqobilovich
+            </a>
+            <button
+              class="action bg-green-200 text-green-500 px-[0.8rem] py-[0.2rem] rounded-md text-[0.8rem]"
+            >
+              Tasdiqlangan
             </button>
-            <li>
-              <a href=""
-                ><img class="w-[2.3rem]" src="/assets/images/logout.svg" alt=""
-              /></a>
-            </li>
-          </ul>
+          </div>
         </div>
       </nav>
-      <!-- Header Navbar -->
-    </div>
+      <!-- /Second Navbar -->
+    </header>
 
-    <!-- Navbar Mobile Version -->
-    <div
-      class="mobile_content lg:hidden h-auto bg-white-900 p-8 absolute z-10 bg-white w-[100%] shadow"
-    >
-      <ul class="ul links flex flex-col gap-[2rem] items-center text-center">
-        <button
-          class="btn bg-gray-200 flex items-center justify-between rounded-md pe-[0.2rem] pl-[1rem] py-[0.3rem] gap-4 font-[600]"
-        >
-          Shohrux
-          <span
-            ><img
-              class="bg-green-500 p-1 rounded-md"
-              src="/assets/images/user_avatar.svg"
-              alt=""
-          /></span>
-        </button>
-        <li>
-          <a href="" class="flex items-center font-[600]"
-            ><img
-              class="mr-1 w-[30px]"
-              src="/assets/images/logout.svg"
-              alt=""
-            />Chiqish</a
-          >
-        </li>
-      </ul>
-    </div>
-    <!-- /Navbar Mobile Version -->
-
-    <!-- Second Navbar -->
-    <nav class="other_navbar_second bg-gray-50">
-      <div
-        class="container_dashboard mx-auto py-[2rem] px-[0.8rem] md:px-[2rem] lg:px-[3rem] xl:px-[5.3rem]"
-      >
-        <div class="second-navbar__content flex items-center gap-[1rem]">
-          <a href="#" class="font-[600] text-[1.2rem]">
-            <span> &larr;</span> Ishmuhammedov Aziz Ishqobilovich
-          </a>
-          <button
-            class="action bg-green-200 text-green-500 px-[0.8rem] py-[0.2rem] rounded-md text-[0.8rem]"
-          >
-            Tasdiqlangan
-          </button>
-        </div>
-      </div>
-    </nav>
-    <!-- /Second Navbar -->
-
-    <!-- Sponsor Deetail Content -->
+    <!-- Sponsor Detail Content -->
     <div class="sponsor-detail bg-gray-100">
       <div class="sponsor-detail__content flex flex-col min-h-[100vh]">
         <!-- Sponsor detail content -->
